@@ -1,6 +1,7 @@
 # ابدأ مع git
 ###### بقلم دحمان
 ##التحميل
+----
 [تحميل من الموقع الرسمي](https://git-scm.com/download/win "تحميل من الموقع الرسمي")
 يمكنك المتابعة بنفسك اذا لم تستطع git  لم يصنع لك 
 ## التسجيل في github من خلال git
@@ -19,6 +20,7 @@ git config --global user.email johndoe@example.com
 ```
 غير johndoe@example.com ب ايميلك الذي سجلت به في **github**
 لهذه المرحلة لم ندخل اي كلمة سر  كما نرى
+----
 ##تأكيد حسابك 
 في هذا الشرح سوف نستخدم **ssh**
 ###معلومة صغيرة حول  ssh
@@ -67,3 +69,15 @@ git commit -m "simple edit"
 git push
 REM لرفع التحديث الى github
 ```
+###كيفية تفادي كتابة passkey في كل مرة تقوم بعمل push او pull 
+```bash
+start-ssh-agent.cmd
+```
+##المراجع 
+https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
+https://stackoverflow.com/questions/10032461/git-keeps-asking-me-for-my-ssh-key-passphrase
+https://gist.github.com/xirixiz/b6b0c6f4917ce17a90e00f9b60566278
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh
+##لم ننتهي من الشرح انا فقط تعبت 
+لايمكنك ان تلموني :)
