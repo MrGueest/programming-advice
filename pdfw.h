@@ -302,3 +302,13 @@ string PrintStringWithoutPunct(string Text, string Space)
 		Word += temp + Space;
 	return Word.substr(0, Word.length() - 1);
 }
+
+
+
+
+
+//Dahmane.
+int cmp(int l, int r,bool rev=false)//return 1 if l(left) greater 0 if l equals r(right) -1 if r greater annd reverse evriting ig rev set to true 
+{if (!rev) return int(l < r)-int(l > r);else return int(l > r)-int(l < r);}
+template <typename T, size_t N> int cindx(int v,T (&arr)[N],bool offest=false) // works as floor but with arrays (by default) returns index of value that are less or equals the int if int are less then the first index will return -2 if you set offest to true will reverse evriting and return -1 if the value are greater then last index 
+{for(int i=0;i<sizeof(arr)/N;i++){if (cmp(arr[i],v,true) == 1){if(!offest) return -2;else return 0;}if((cmp(arr[i],v) == 1 ||cmp(arr[i],v) == 0) && cmp(arr[i+1],v,true) == 1){return int(offest)+i;}}if(!offest)return sizeof(arr)/N;else return -1;}
