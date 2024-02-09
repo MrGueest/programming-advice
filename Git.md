@@ -20,12 +20,11 @@ git config --global user.email johndoe@example.com
 ```
 غير johndoe@example.com ب ايميلك الذي سجلت به في **github**
 لهذه المرحلة لم ندخل اي كلمة سر  كما نرى
-----
-##تأكيد حسابك 
+## تأكيد حسابك 
 في هذا الشرح سوف نستخدم **ssh**
-###معلومة صغيرة حول  ssh
+### معلومة صغيرة حول  ssh
 الssh يحتوي على مفتاحين احدهما عام نرسله الى github والاخر خاص يحفظ في الجهاز في الخطوة التالية سوف نقوم بانشاء مفتاح  ssh  وارساله الى github
-###انشاء المفتاح(الخاص و العام)
+### س2zaانشاء المفتاح(الخاص و العام)
 انشء مجدد باسم  `.ssh` وتنقل اليه من خلال
 ```bash
 mkdir .ssh
@@ -41,14 +40,14 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 هنيهة صغيرة ثم تظهر هذه الرسالة
 `> Enter file in which to save the key (/c/Users/YOU/.ssh/id_ALGORITHM):[Press enter]`
 اضغط `enter` اذا ظهر لك اي اسم اخر في مكان `id_rsa`  لا تظغط `enter`  بل اكتب `id_rsa` ومن  ثم  اظغط `enter`  
-####حجز مفتاحك العام داخل Github 
+#### حجز مفتاحك العام داخل Github 
 ماعليك الا بكتابة
 ```bash
 type %userprofile%\.ssh\id_rsa.pub | clip
 ```
 لقد قمت بنسخ المفتاح بنجاح معليك الان الا  وضعه داخل **Github**  وذلك بالانتقال الى  الصفحة التالية  **[هنا](http://https://github.com/settings/keys "
 هنا")** ستظهر مربع كتابة عنوان يمكنك كتابة اي اسم للمفتاح لكي تتذكره  وفي مربع الثاني ضع المفتاح لا تقلق لقد نسخته باستخدام الامر الاخير ومن ثم قم بحفظ  قد يطالبك بادخال كلمة السر للاكمال
-####تحقق من المفتاح 
+#### تحقق من المفتاح 
 ```ssh -T git@github.com```
 ### لمسات اخيرة
 سوف نقوم ب استنساخ`programing-advice` repostory والتعديل عليه ثم رفعه للتحقق من ان كل شيئ جاهز
@@ -73,11 +72,13 @@ REM لرفع التحديث الى github
 ```bash
 start-ssh-agent.cmd
 ```
-##المراجع 
+## المراجع
+
 https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
 https://stackoverflow.com/questions/10032461/git-keeps-asking-me-for-my-ssh-key-passphrase
 https://gist.github.com/xirixiz/b6b0c6f4917ce17a90e00f9b60566278
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh
-##لم ننتهي من الشرح انا فقط تعبت 
+-----
+لم ننتهي من الشرح انا فقط تعبت 
 لايمكنك ان تلموني :)
